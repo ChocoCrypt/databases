@@ -1,0 +1,61 @@
+table uni_acad{
+  nombre_unid varchar(20)
+  edificio varchar(15) [not null]
+  presupuesto numeric (12,2)
+  primary key (nombre_unid)
+}
+
+table curso{
+  curso_cod varchar(7)
+  nombre varchar(50)
+  nombre_unid varchar(20)
+  creditos numeric(2,0)
+  primary key(curso_cod)
+  foreign key (nombre_unid) //references uni_acad
+}
+Ref {
+  curso.nombre_unid > uni_acad.nombre_unid
+}
+table instructor{
+  inst_ID varchar(5)
+  nombre varchar(20) [not null]
+  nombre_unid varchar(20) [ref: > uni_acad.nombre_unid]
+  salario numeric(8,2) 
+  primary key (inst_ID)
+}
+
+table grupo{
+  curso_cod varchar(8)
+  grupo_cod varchar(8)
+  semestre varchar(6)
+  ano numeric(4,0) 
+  primary key (curso_cod , grupo_cod , semestre , ano)
+  foreign key (curso_cod) // References curso
+}
+Ref {
+  grupo.curso_cod > curso.curso_cod
+}
+
+table dicta{
+  inst_id varchar(5)
+  curso_cod varchar(8)
+  grupo_cod varchar(8)
+  semestre varchar(6)
+  ano numeric(4,0)
+  primary key (inst_ID , curso_cod , grupo_cod , semestre, ano)
+  foreign key (curso_cod , grupo_cod , semestre, ano) //references grupo
+}
+Ref{
+  dicta.curso_cod > grupo.curso_cod
+}
+Ref{
+  dicta.grupo_cod > grupo.grupo_cod
+}
+Ref{
+  dicta.semestre > grupo.semestre
+}
+Ref{
+  dicta.ano > grupo.ano
+}
+
+

@@ -1,0 +1,20 @@
+insert into unid_acad values('MACC', 'Cabal', 100.0);
+insert into unid_acad values('ECON', 'Pedro', 800.0);
+insert into unid_acad values('BIOL', 'QM', 500.0);
+insert into curso values('000', 'programacion', 'MACC', 4 );
+insert into curso values('001', 'arquitectura', 'MACC', 4 );
+insert into curso values('002', 'algoritmos', 'MACC', 4 );
+insert into curso values('003', 'laboratorio', 'BIOL', 5 );
+insert into instructor values('1', 'Juan Perez', 'MACC', 100);
+insert into instructor values('2', 'Ana Gutierrez', 'MACC', 200);
+insert into instructor values('3', 'Ernerto Huertas', 'ECON', 500);
+insert into instructor values('4', 'Reinaldo Rondon', 'MACC', 300);
+insert into grupo values('000', '1','1', 2018);
+insert into grupo values('001', '1','2', 2018);
+insert into grupo values('002', '1','1', 2018);
+insert into grupo values('002', '2','1', 2018);
+insert into dicta values('1', '000', '1', '1', 2018);
+insert into dicta values('2', '001', '1', '2', 2018);
+insert into dicta values('3', '002', '1', '1', 2018);
+insert into dicta values('4', '002', '1', '1', 2018);
+

@@ -1,0 +1,36 @@
+4. Después de tener el encoder y el decoder para archivos .bla, guarde una prueba con la imagen de su preferencia (recordar de tamaño inferior a 256 x 256). Haga una copia del archivo .bla y ábralo utilizando bloc de notas o WordPad. ¿qué sucede cuando intenta volverlo a pasar por el decoder? ¿por qué? ¿Se corrompe el tamaño de la imagen? 
+
+el archivo se corrompe y no es posible de abrir, esto sucede porque la manera en la que Wordpad o bloc de notas codifican el archivo binario para imprimirlo es diferente al verdadero binario que codificamos anteriormente en el archivo .bla , por lo tanto, luego el lector de imagenes no entiende el binario de la imagen original.
+
+5. ¿Cómo arreglaría este problema?
+
+La forma sencilla de arreglar ese problema es el cambiar el lector de archivos a un lector de archivos que no cambie la codificación de la imagen al momento de leerla, por ejemplo nano , pluma, gedit , Notepad++ , etc...
+
+Sin embargo, leyendo en foros, encontré que si uno cambia la extensión de la imagen a .bmp (bitmap) y la guarda así, a veces el editor wordpad es lo suficiente inteligente para no cambiar la codificación de la imagen porque sabe que es un archivo binario. aunque esto no funciona todas las veces, la idea sería cambiar la extensión de la imagen a .bmp para leerla y luego volverla a cambiar para leerla con el lector de imágenes 
+
+
+5.1 Diagnostique la situación con base en el error que obtiene. 
+
+el lector de imágenes no entiende el binario 
+
+
+
+5.2 Investigue el tamaño del arreglo resultante y relacione con el error que obtuvo.
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+ESTO LE TOCA HACERLO Y MODIFICARLO A UD PORQUE YO NO PUEDO MIRAR ESO PORQUE UD TIENE EL SCRIPT
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+5.3 Determine la causa del error que obtiene. Qué relación tiene con la codificación de caracteres de Windows. Qué pasa con Processing? Si cambia el wordpad por Notepad++, sigue obteniendo el mismo error?
+
+no se obtiene el mismo error porque Notepad++ si sabe como leer esa clase de binario , entonces no modifica el binario original y el lector de imagenes si lo sabe reconocer.
+
+
+
+5.4 De ser posible, arréglelo. Su benchmark es que un archivo .bla abierto y guardado desde Wordpad sea decodeable con su programa. Si no es posible, comente por qué no es posible. 
+
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+NECESITO QUE ME MANDE LA IMAGEN PARA HACER ESTO
+!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!

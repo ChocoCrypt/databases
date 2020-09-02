@@ -1,0 +1,20 @@
+1. Utilizando el sketch dado, completar el código del método byte[] encodeImage(PImage in) que codifica una imagen digital (como objeto PImage de Processing) en un arreglo de bytes[] conociendo la especificación de la función color() y con esto poder guardar imágenes como archivos binarios en extensión .bla. 
+
+2. Utilizando el sketch dado, completar el código del método PImage decodeImage(byte[] fileInfo) para poder decodificar un archivo en formato .bla como imagen digital. 
+
+3. El formato de un archivo binario en extensión .bla es muy sencillo:
+
+    El encabezado del archivo consta de dos bytes iniciales: el ancho y el alto de la imagen potencial (véase el código contenido dentro del método void keyPressed()).
+    Un chorro de bytes que describen los tonos de los pixeles en formato ARGB. 
+
+4. Después de tener el encoder y el decoder para archivos .bla, guarde una prueba con la imagen de su preferencia (recordar de tamaño inferior a 256 x 256). Haga una copia del archivo .bla y ábralo utilizando bloc de notas o WordPad. ¿qué sucede cuando intenta volverlo a pasar por el decoder? ¿por qué? ¿Se corrompe el tamaño de la imagen? 
+
+5. ¿Cómo arreglaría este problema?
+
+5.1 Diagnostique la situación con base en el error que obtiene. 
+
+5.2 Investigue el tamaño del arreglo resultante y relacione con el error que obtuvo.
+
+5.3 Determine la causa del error que obtiene. Qué relación tiene con la codificación de caracteres de Windows. Qué pasa con Processing? Si cambia el wordpad por Notepad++, sigue obteniendo el mismo error?
+
+5.4 De ser posible, arréglelo. Su benchmark es que un archivo .bla abierto y guardado desde Wordpad sea decodeable con su programa. Si no es posible, comente por qué no es posible. 
